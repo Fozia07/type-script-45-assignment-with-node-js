@@ -8,8 +8,9 @@ function car_feature(manufacturer, model, ...options) {
     //addtional option 
     options.forEach(option => {
         let [key, value] = option.split(":");
+        [key] = value;
     });
     return car;
 }
-console.log(car_feature("kia", "picanto", ["color", "silver"], ["year", 2020]));
-console.log(car_feature("honda", "city", ["color", "red"], ["year", 2018]));
+console.log(car_feature("kia", "picanto", "color:silver", "year:2020"));
+console.log(car_feature("honda", "city", "color:red", "year:2018"));

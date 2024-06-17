@@ -6,20 +6,23 @@
 
 let magicianName=["David Copperfield","Doug Henning","Penn & Teller","David Blaine","Lance Burton"];
 
-function show_magician(magician:string) {
+function show_magician(magician:string[]) {
     for (let i=0;i<magicianName.length;i++)
    console.log(magicianName[i])   
 }
 
-function make_great(magician:string){
-    let greatmagician=[]
-    magician.forEach(magician=>{greatmagician.push(`${magician} the great`);
-
-    })   
-    return greatmagician
+function make_great(magicianName:string[]){
+    return magicianName.map(name=>`The great ${name}`)  
      }
 
+// let great_magician=make_great(magicianName)
+// console.log(great_magician)
 //copy of the magician name array
 
-let copy_magicianName=magicianName.slice();
-console.log(copy_magicianName);
+ let copy_magicianName=magicianName.slice();
+ let copy_great_magician:string[]=make_great(copy_magicianName);
+    
+console.log('\noriginal array\n')
+ show_magician(magicianName)
+ console.log('\ncopied array');
+ show_magician(copy_great_magician);

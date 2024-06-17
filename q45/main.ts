@@ -3,13 +3,13 @@
 //   such as a color or an optional feature. Print the Object that’s returned to make sure all the information was stored correctly.
 
 
-function car_feature(manufacturer:string,model:string,...options:any[]){
+function car_feature(manufacturer:string,model:string,...options:string[]){
       let car={ manufacturer:manufacturer,
                        model     :model};
        //addtional option 
         options.forEach(option=>{
             let [key,value]=option.split(":");
-            car[key]
+            car.[key]=value
         });
         return car;
       }

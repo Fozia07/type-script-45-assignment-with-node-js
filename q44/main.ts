@@ -4,10 +4,14 @@
 
 
 function make_sandwich(...item:string[]){
-    console.log(`Making a sandwich with ${item.join(',')}.`)
+    console.log('/nMaking a sandwich with following item\n')
+    item.forEach(items=>console.log(items));
+    console.log('\nNow enjoy sandwich\n');
+    
+        
+    };
         
     
-}
 
 
 make_sandwich("bun","kabab","cucumber");
